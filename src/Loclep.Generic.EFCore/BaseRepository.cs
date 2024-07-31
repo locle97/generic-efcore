@@ -2,14 +2,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Loclep.Generic.EFCore;
 
-public class BaseRepository<T, TId> : IBaseRepository<T, TId>
+public class BaseRepository<TDbContext, T, TId> : IBaseRepository<T, TId>
+  where TDbContext : DbContext
   where T : class
   where TId : struct
 {
-  protected readonly DbContext _dbContext;
+  protected readonly TDbContext _dbContext;
 
-  public BaseRepository(DbContext dbContext)
+  public BaseRepository(TDbContext dbContext)
   {
+    _dbContext = dbContext;
   }
 
   public async Task<T> Create(T entity)
