@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Loclep.Generic.EFCore.SampleApp.props" />
+</Project>

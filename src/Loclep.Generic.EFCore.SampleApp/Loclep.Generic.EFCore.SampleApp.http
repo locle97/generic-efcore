@@ -1,0 +1,6 @@
+@Loclep.Generic.EFCore.SampleApp_HostAddress = http://localhost:5016
+
+GET {{Loclep.Generic.EFCore.SampleApp_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
