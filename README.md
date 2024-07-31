@@ -1,1 +1,1 @@
-# generic-efcore
+# Generic EF Core library
